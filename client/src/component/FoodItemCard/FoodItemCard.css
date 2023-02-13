@@ -1,0 +1,63 @@
+.food-item-card {
+    height: 440px;
+    margin: 20px;
+    box-shadow: 2px 3px 4px 3px #808080;
+    text-align: center;
+    border-radius: 10px;
+    width: 300px;
+    color: wheat;
+    padding: 4px;
+    background: linear-gradient(20deg, purple 17%, #6C5CE7 80%);
+    
+}
+
+.food-item-card-header-img {
+    height: 150px;
+    margin: 15px;
+    width: 150px;
+    border-radius: 50%;
+}
+.btn-add-to-list{
+    padding: 2px;
+    width: 120px;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+}
+.btn-add-to-list:hover{
+    width: 115px;
+    transition: 0.4s;
+}
+.qnt-btn{
+  width: 34px;
+  padding: 2px;
+  border: none;
+  margin-bottom: 4px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 2px;
+}
+.qnt-text{
+    margin-left: 10px;
+    margin-right: 10px;
+    border: 1px solid white;
+    padding-left: 9px;
+    padding-right: 9px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    font-weight: bold;
+    font-size: 19px;
+    margin-top: 9px;
+}
+.size{
+    margin-bottom: 10px;
+    font-weight: bold;
+  
+}
+.bold-text{
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.text-size{
+    font-size: 20px;
+}

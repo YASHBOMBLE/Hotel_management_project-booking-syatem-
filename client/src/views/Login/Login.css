@@ -1,0 +1,33 @@
+.login-button{
+    font-size: 22px;
+    background-color: #7c8bfc;
+    color: white;
+    margin-top: 10px;
+    border-radius: 8px;
+    border: 1px solid white;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.link-signup{
+  text-align: center;
+    color: black;
+    margin-left: 20px;
+}
+.form-title{
+    font-size: 14px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.login-img{
+    height: 300px;
+    margin-top: 130px;
+    border-radius: 20px;
+    margin: 9px;
+}
+.login-img-container{
+    display: flex;
+    justify-content: center;
+}

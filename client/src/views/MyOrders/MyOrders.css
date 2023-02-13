@@ -1,0 +1,26 @@
+.container{
+   height: auto;
+}
+.orderCard{
+    box-shadow: 0px 0px 1px 2px #808080;
+    padding: 10px;
+    border-radius: 8px;
+    height: 600px;
+}
+.card-title{
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 36px;
+    font-family: 'Courier New', Courier, monospace;
+   
+}
+.item-container{
+    border: 1px solid black;
+    padding: 10px;
+}
+.item-data{
+    font-weight: bold;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}

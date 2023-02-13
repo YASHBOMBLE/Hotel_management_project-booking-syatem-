@@ -1,0 +1,22 @@
+.profile-container{
+    border: 1px solid black;
+    padding: 10px;
+    margin:10px;
+    width: 350px;
+}
+.user-img{
+    height: 70px;
+}
+.profile-img-conatiner{
+    display: flex;
+    justify-content: center;
+    margin:30px;
+}
+.user-info{
+    font-weight: bold;
+    
+}
+.size{
+    font-size: 23px;
+    color: purple;
+}
