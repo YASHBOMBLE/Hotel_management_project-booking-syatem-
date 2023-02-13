@@ -14,9 +14,16 @@
 }
 .user-info{
     font-weight: bold;
-    
+    line-height: 30px;
+    word-spacing: 3px;
+    font-family: 'Times New Roman';
+    font-size: 18px;
+}
+.main-container{
+    margin-left: auto;
+    margin-right: auto;
 }
 .size{
-    font-size: 23px;
+    font-size: 27px;
     color: purple;
 }
