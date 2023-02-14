@@ -3,7 +3,7 @@ import "./Footer.css"
 function Footer() {
   return (
     <div>
-      <div className='container' >
+      <div className='footer-container' >
         <hr className='hr-rule'/>
         <div>
             Copyright © 2023

@@ -49,11 +49,11 @@ function Login() {
   return (
     <div>
       
-      <div className='row'>
+      <div className='row m-1'>
         <div className='col-md-6'>
-        <div className='login-img-container' >
-          <img src={Logo} className='login-img' />
-        </div>
+        <div class="container">
+         <span className='text'>Login Here To continue</span>
+    </div>
         </div>
 
         <div className='col-md-6'>
@@ -77,8 +77,10 @@ function Login() {
               </div>
 
               <div>
-                
+                <hr />
                 <button type='button' className='login-button' onClick={loginUser}>Login</button>
+                <hr /> 
+               
                 <Link to='/signUp' className='link-signup' >Don't have account signup</Link>
               </div>
             </form>
