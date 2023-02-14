@@ -19,12 +19,7 @@ const [tableNumber,setTableNumber] = useState('');
     tableNumber:tableNumber
   })
   const result=response.data.success;
-  await swal({
-    title:"Table created Successfully"
-    ico
-  })
  }
-  
   return (
     <div>
        <input type='text' placeholder='Enter tableNumber' 
