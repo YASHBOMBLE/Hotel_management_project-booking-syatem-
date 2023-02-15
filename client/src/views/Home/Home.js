@@ -15,16 +15,12 @@ function Home() {
 
 
   async function fetchAllItems() {
-    console.log('fetching all items')
     const response = await axios.get('/allFoodItems')
-    console.log(response.data.data)
     setAllFoodItems(response.data.data)
   }
 
   async function fetchSpecificItems() {
-    console.log('fetching specific items')
     const response = await axios.get(`/foodItems?title=${searchText}`)
-    console.log(response.data.data)
     setAllFoodItems(response.data.data)
   }
 
@@ -38,7 +34,12 @@ function Home() {
   }, [searchText])
 
 
-  function logOut() {
+  async function logOut() {
+    const response = await axios.post('/unbookTable', {
+      tableNumber: localStorage.getItem('tableNumber')
+    })
+    console.log(response.data.data);
+    localStorage.removeItem('tableNumber');
     localStorage.removeItem('currentUser');
     window.location.href = '/login'
   }
@@ -51,7 +52,6 @@ function Home() {
     <div>
       <Navbar user={currentUser?.name} />
       <div>
-
       </div>
       <div className='row' >
         <div className='col-md-3' ></div>

@@ -10,6 +10,7 @@ function TableCard({ tableNumber,userId}) {
       tableNumber:tableNumber,
       userId:userId
     })
+    localStorage.setItem('tableNumber', JSON.stringify(tableNumber));
     const responseStatus=response.data.success;
     if(responseStatus==true)
     {

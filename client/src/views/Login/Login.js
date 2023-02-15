@@ -6,6 +6,7 @@ import { currentUser } from './../../util/currentUser'
 import "./Login.css"
 import { Link } from 'react-router-dom'
 import Logo from "./../../images/Login img.png"
+import Footer from '../../component/Footer/Footer';
 
 function Login() {
   const [email, setEmail] = useState('')
@@ -87,6 +88,7 @@ function Login() {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   )
 }

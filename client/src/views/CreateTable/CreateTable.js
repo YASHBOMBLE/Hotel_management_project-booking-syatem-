@@ -1,14 +1,14 @@
 import React,{useEffect,useState} from 'react'
 import "./CreateTable.css"
 import axios from 'axios'
-import cheackAdmin from "./../util/cheackAdmin"
+import { cheackAdmin } from '../../util/cheackAdmin';
 import { NavigationType } from 'react-router-dom';
 import swal from 'sweetalert';
 function CreateTable() {
 const [tableNumber,setTableNumber] = useState('');
 
   useEffect(()=>{
-   cheackAdmin();
+    cheackAdmin();
   },[])
  
 

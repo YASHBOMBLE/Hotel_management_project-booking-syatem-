@@ -232,11 +232,22 @@ app.post("/unbookTable", async (req, res) => {
         await existingTable.save();
     }
 
+    if(!tableNumber)
+    {
+        res.json({
+            success:false,
+            message:"Table Number Required",
+            data : existingTable
+        })
+    }
+    else{
+
     res.json({
         success: true,
         message: "Table unbooked successfully",
         data: existingTable
     })
+}
 });
 
 app.get("/availableTables", async (req, res) => {
@@ -250,7 +261,7 @@ app.get("/availableTables", async (req, res) => {
 });
 
 app.post("/orderFoodItems", async(req, res) => {
-    const {userId, tableNumber, items} = req.body
+    const {userId, tableNumber, items,paybaleamout} = req.body
 
     const totalOrders = await Order.countDocuments();
     const orderId = totalOrders + 1;

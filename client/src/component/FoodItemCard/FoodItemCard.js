@@ -11,7 +11,8 @@ function FoodItemCard({ category, description, imgUrl, price, title }) {
    const listObject = {
      name: title,
      price: price,
-     quantity: quantity
+     quantity: quantity,
+     paybleamount : price * quantity
    }
 
    const existingList = JSON.parse(localStorage.getItem('list')) || []

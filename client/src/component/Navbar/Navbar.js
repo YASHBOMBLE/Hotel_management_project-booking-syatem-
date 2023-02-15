@@ -25,6 +25,13 @@ const [foodItemCount , setFoodItemCount] = useState(myFoodListCount)
               <li class="nav-item">
                 <Link to="/bookTable" className='nav-link' >Book Table</Link>
               </li>
+              <li class="nav-item">
+                <Link to="/profile" className='nav-link' >Profile</Link>
+              </li>
+              
+              <li class="nav-item">
+                <Link to="/myOrders" className='nav-link' >Vew MyOrders</Link>
+              </li>
             </ul>
             <form class="d-flex align-items-center">
               <h4 className='me-2 text-light'>Hello {user}</h4>

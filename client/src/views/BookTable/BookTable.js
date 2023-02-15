@@ -29,7 +29,7 @@ function BookTable() {
         {
           currentTable?.map((tableItem, index) => {
             if (tableItem.occupied == false) {
-              localStorage.setItem("tableNumber",JSON.stringify(tableItem.tableNumber))
+              
               return (<TableCard tableNumber={tableItem.tableNumber} userId={tableItem._id} />)
             }
           })
