@@ -7,7 +7,7 @@ import BookTable from './views/BookTable/BookTable'
 import MyOrders from './views/MyOrders/MyOrders'
 import Profile from './views/Profile/Profile'
 import MyList from './views/MyList/MyList'
-import CreateTable from './views/CreateTable/CreateTable'
+
 
 function App() {
   return (
@@ -21,7 +21,7 @@ function App() {
           <Route path='/profile' element={<Profile />} />
           <Route path='/myList' element={<MyList />} />
           <Route path='/myOrders' element={<MyOrders />} />
-          <Route path='/createTable' element={<CreateTable />} />
+     
         </Routes>
       </BrowserRouter>
     </div>

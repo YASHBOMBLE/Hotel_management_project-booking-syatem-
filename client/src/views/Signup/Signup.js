@@ -3,7 +3,10 @@ import axios from 'axios'
 import swal from 'sweetalert';
 
 import { currentUser } from './../util/currentUser'
+
 import "./Signup.css"
+
+
 
 
 function Signup() {
@@ -56,6 +59,9 @@ function Signup() {
         <div className='col-md-6'>
         <div className='info-container'>
         <marquee> <span className='info-container-text'>S</span>ignup Here to place order...</marquee>
+      
+        
+        
         </div>
           <div className="logo-img-container">
           
