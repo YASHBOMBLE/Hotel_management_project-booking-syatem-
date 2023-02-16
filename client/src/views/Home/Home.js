@@ -59,6 +59,7 @@ function Home() {
         <div className='col-md-3' ></div>
 
         <div className='col-md-3'>
+
           <div className='search-container'>
             <input type="text" placeholder='Search Food Item Here..' className='input-search'
               value={searchText}
@@ -69,11 +70,14 @@ function Home() {
       <hr />
       <div className='food-items-result'>
         <div class="row ">
+          
           {
             currentFoodItems?.map((foodItem, index) => {
               return (<FoodItemCard description={foodItem.description} category={foodItem.category} title={foodItem.title} price={foodItem.price} imgUrl={foodItem.imgUrl} key={index} />)
             })
           }
+          
+          
         </div>
       </div>
       <div class="d-grid gap-2 logout-btn">

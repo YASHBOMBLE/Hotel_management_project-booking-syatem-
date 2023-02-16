@@ -36,7 +36,7 @@ const [foodItemCount , setFoodItemCount] = useState(myFoodListCount)
             <form class="d-flex align-items-center">
               <h4 className='me-2 text-light'>Hello {user}</h4>
               <Link to="/bookTable" className='text-decoration-none'>
-                <h4 className='me-2 my-list'>🍽️ {foodItemCount}</h4>
+                <h4 className=' my-list'>🍽️ {foodItemCount}</h4>
               </Link>
             </form>
           </div>

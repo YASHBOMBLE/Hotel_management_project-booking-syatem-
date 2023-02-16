@@ -4,7 +4,7 @@ function Footer() {
   return (
     <div>
       <div className='footer-container' >
-        <hr className='hr-rule'/>
+        <hr />
         <div>
             Copyright © 2023
         </div>

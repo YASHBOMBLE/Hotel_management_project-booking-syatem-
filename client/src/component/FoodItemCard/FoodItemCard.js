@@ -29,7 +29,9 @@ function FoodItemCard({ category, description, imgUrl, price, title }) {
 
   return (
     <div className='col-md-3'>
+          <div className='food-Item-container'>
       <div className="food-item-card">
+    
         <div>
           <img src={imgUrl} class="food-item-card-header-img" />
         </div>
@@ -46,6 +48,7 @@ function FoodItemCard({ category, description, imgUrl, price, title }) {
         <div>
           <button type="button" className='btn-add-to-list' onClick={addToList}>Add To List</button>
         </div>
+      </div>
       </div>
     </div>
   )

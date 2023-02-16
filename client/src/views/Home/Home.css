@@ -9,8 +9,6 @@
     border-radius: 10px;
 }
 .input-search{
-    
-    
     height: 38px;
     width: 250px;
     border-left: none;
@@ -18,7 +16,6 @@
     border-top: none;
     font-size: 16px;
     font-weight: bold;
-    
 }
 .input-search:focus{
     outline: none;
@@ -28,7 +25,6 @@
     font-family: 'Courier New', Courier, monospace;
 }
 .logOut-text{
-    margin-right: 8px;
     display: inline;
     letter-spacing: 5px;
 }

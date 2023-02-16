@@ -9,6 +9,7 @@ import user from '../../images/user.png'
 import { cheackAdmin } from '../../util/cheackAdmin'
 import axios from 'axios'
 import swal from 'sweetalert'
+import Footer from '../../component/Footer/Footer'
 
 
 
@@ -75,6 +76,15 @@ function Profile() {
       }
    }
 
+   async function addFoodItem(){
+    await  await swal({
+        title:"Feature Comming Soon ",
+        text:"We Working On These Feature, Kindly Keep Cheaking ",
+        icon: "warning",
+    })
+    }
+   
+
     function adminView() {
         if (currentUser?.role == "admin") {
             return (
@@ -85,8 +95,9 @@ function Profile() {
                     <hr />
                     <div class="d-grid gap-2 logout-btn">
                         <button className='btn btn-primary' onClick={createTable}>Create Table</button>
-                        <button className='btn btn-primary'>Add FoodItem</button>
+                        <button className='btn btn-primary' onClick={addFoodItem}>Add FoodItem</button>
                         <button className='btn btn-primary' onClick={unBook} >Unbook Table</button>
+                      
 
                     </div>
 
@@ -97,13 +108,22 @@ function Profile() {
         }
     }
 
+    async function updateProfile(){
+        await swal({
+            title:"Feature Comming Soon ",
+            text:"We Working On These Feature, Kindly Keep Cheaking ",
+            icon: "warning",
+        })
+        window.location.reload();
+    }
+
     return (
         <div>
             <div>
                 <Navbar user={currentUser?.name} />
             </div>
             <div className='row'>
-                <div className='col-md-6 main-container'>
+                <div className='col-md-12 main-container'>
                     <div className='sub-container'>
                         <div className='profile-container'>
                             <div className='profile-img-conatiner'>
@@ -127,12 +147,13 @@ function Profile() {
                             </span>
                             <div class="d-grid gap-2 logout-btn mt-3">
                                 <button type="button" className='btn btn-primary' onClick={logOut}><p className='logOut-text'>Logout</p><i class="fa-solid fa-right-from-bracket"></i></button>
-
+                                <button type="button" className='btn btn-primary' onClick={updateProfile}><p className='logOut-text'>Update Profile</p><i class="fa-regular fa-pen-to-square"></i></button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <Footer />
         </div>
     )
 }

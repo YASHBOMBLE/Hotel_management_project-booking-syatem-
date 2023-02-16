@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import swal from 'sweetalert';
-
 import { currentUser } from './../util/currentUser'
-
 import "./Signup.css"
 
 
@@ -64,7 +62,7 @@ function Signup() {
         
         </div>
           <div className="logo-img-container">
-          
+            
           </div>
        
    
