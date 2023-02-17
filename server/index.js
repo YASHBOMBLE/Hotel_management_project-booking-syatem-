@@ -185,7 +185,7 @@ app.get("/allFoodItems", async(req, res)=>{
 
 app.post("/createTable", async(req, res)=>{
     const {tableNumber} = req.body;
-
+   
     const existingTable = await Table.findOne({ tableNumber: tableNumber });
     if (existingTable) {
         return res.json({
@@ -317,6 +317,8 @@ app.get("/ordersByUserId", async(req, res)=>{
         data: orders
     })
 });
+
+
 // api routes ends here
 
 app.use(express.static(path.join(__dirname, '..', 'client', 'build')));

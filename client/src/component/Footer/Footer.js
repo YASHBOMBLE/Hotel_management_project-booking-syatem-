@@ -5,7 +5,7 @@ function Footer() {
     <div>
       <div className='footer-container' >
         <hr />
-        <div>
+        <div >
             Copyright © 2023
         </div>
       </div>

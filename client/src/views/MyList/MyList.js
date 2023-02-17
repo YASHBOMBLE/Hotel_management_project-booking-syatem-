@@ -1,4 +1,4 @@
-import React,{useEffect} from 'react'
+import React,{useEffect,useState} from 'react'
 import './MyList.css'
 import Navbar from '../../component/Navbar/Navbar'
 import axios from 'axios'
@@ -14,6 +14,8 @@ function MyList() {
       useEffect(()=>{
        ordervalidation();
       },[])
+  
+
       
       async function ordervalidation(){
         if(myFoodListItems.length == 0)
@@ -59,6 +61,7 @@ function MyList() {
                 <div>
                 {
                 myFoodListItems.map((item, index) => {
+                   
                     return (
                         <div>
                             <h6>Name: {item.name}</h6>
@@ -66,7 +69,11 @@ function MyList() {
                             <h6>Price: {item.price}</h6>
                             <h6>Payable Amount : {item.quantity * item.price}</h6>
                             <hr />
-                        </div>)
+                          
+                            
+                        </div>
+                        
+                        )
                 })
             }
                 </div>

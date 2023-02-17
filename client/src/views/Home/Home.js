@@ -53,6 +53,20 @@ function Home() {
       <Navbar user={currentUser?.name} />
       <div>
       </div>
+      <div className='row'>
+        <div className='col-md-6'>
+
+        </div>
+        <div className='col-md-6'>
+    <div className='main-search-container'>
+    <div className='search-container'>
+            <input type="text" placeholder='Search Food Item Here..' className='input-search'
+              value={searchText}
+              onChange={(e) => setSearchText(e.target.value)} />
+          </div>
+    </div>
+        </div>
+      </div>
       <div className='row' >
         <div className='col-md-3' ></div>
         <div className='col-md-3' ></div>
@@ -60,11 +74,7 @@ function Home() {
 
         <div className='col-md-3'>
 
-          <div className='search-container'>
-            <input type="text" placeholder='Search Food Item Here..' className='input-search'
-              value={searchText}
-              onChange={(e) => setSearchText(e.target.value)} />
-          </div>
+          
         </div>
       </div>
       <hr />

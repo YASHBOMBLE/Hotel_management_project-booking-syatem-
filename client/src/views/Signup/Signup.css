@@ -1,3 +1,6 @@
+body{
+  padding: 9px;
+}
 .form-container {
   background: linear-gradient(20deg, purple 17%, #6C5CE7 80%);
   width: 400px;
@@ -49,20 +52,7 @@
   text-align: center;
 }
 
-.logo-img-container {
-  height: 270px;
-  width: 270px;
-  border-radius: 50%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 30px;
-}
 
-.logo-img {
-  height: 270px;
-  width: 270px;
-  border-radius: 50%;
-}
 
 .info-container {
   font-size: 30px;
@@ -76,4 +66,13 @@
 .info-container-text {
   font-size: 40px;
   color: #a54949;
+}
+
+.signup-img-size{
+  height: 450px;
+ 
+}
+.main-container-signup-img{
+  display: flex;
+  justify-content: center;
 }

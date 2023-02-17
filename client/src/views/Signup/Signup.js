@@ -3,6 +3,7 @@ import axios from 'axios'
 import swal from 'sweetalert';
 import { currentUser } from './../util/currentUser'
 import "./Signup.css"
+import signupImg from "./../../images/signupImg.svg"
 
 
 
@@ -57,13 +58,16 @@ function Signup() {
         <div className='col-md-6'>
         <div className='info-container'>
         <marquee> <span className='info-container-text'>S</span>ignup Here to place order...</marquee>
-      
-        
         
         </div>
-          <div className="logo-img-container">
-            
-          </div>
+     <div className='main-container-signup-img m-1'>
+      <div className='container'>
+      <img src={signupImg} className = "img-fluid signup-img-size"/>
+      </div>
+      
+      </div>
+          
+     
        
    
         </div>
@@ -107,6 +111,7 @@ function Signup() {
           </div>
         </div>
       </div>
+    <hr />
     </div>
   )
 }
