@@ -61,7 +61,7 @@ function Login() {
 
         <div className='col-md-6'>
 
-          <div className='form-container'>
+          <div className='form-container size-form-container'>
             <form>
               <div className='form-title' >
                 Login

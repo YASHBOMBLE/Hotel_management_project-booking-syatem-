@@ -53,3 +53,7 @@ body {
 .user-login-img{
     width: 750px;
 }
+.size-form-container{
+    width: auto;
+    margin: 7px;
+}
