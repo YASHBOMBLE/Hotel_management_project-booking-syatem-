@@ -4,7 +4,8 @@ import swal from 'sweetalert';
 import { currentUser } from './../util/currentUser'
 import "./Signup.css"
 import signupImg from "./../../images/signupImg.svg"
-
+import Footer from '../../component/Footer/Footer';
+import Navbar from '../../component/Navbar/Navbar';
 
 
 
@@ -54,6 +55,7 @@ function Signup() {
 
   return (
     <div>
+      <Navbar />
       <div className='row'>
         <div className='col-md-6'>
         <div className='info-container'>
@@ -111,7 +113,7 @@ function Signup() {
           </div>
         </div>
       </div>
-    <hr />
+     <Footer />
     </div>
   )
 }

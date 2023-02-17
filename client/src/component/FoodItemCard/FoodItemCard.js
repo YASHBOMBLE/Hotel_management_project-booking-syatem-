@@ -1,13 +1,30 @@
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import swal from 'sweetalert';
 
 import "./FoodItemCard.css";
 function FoodItemCard({ category, description, imgUrl, price, title }) {
 
   const [quantity, setQuantity] = useState(1)
+ useEffect(()=>{
+  validateQuantity()
+ },[quantity])
+ 
+ async function validateQuantity()
+ {
+  if(quantity<= 0)
+  {
+    await swal({
+      title: "Error",
+      icon: "warning",
+      text:"Minimum Quantity must be 1",
+      button: "Try Again!",
+    });
+   window.location.reload();
+  }
+ }
 
-  
   async function addToList(){
+   
    const listObject = {
      name: title,
      price: price,
@@ -15,6 +32,7 @@ function FoodItemCard({ category, description, imgUrl, price, title }) {
      paybleamount : price * quantity
    }
 
+  
    const existingList = JSON.parse(localStorage.getItem('list')) || []
 
    existingList.push(listObject)

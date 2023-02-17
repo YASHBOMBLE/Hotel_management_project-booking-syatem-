@@ -5,11 +5,11 @@ import { currentUser } from '../util/currentUser'
 import "./Profile.css"
 import Navbar from '../../component/Navbar/Navbar'
 import user from '../../images/user.png'
-
 import { cheackAdmin } from '../../util/cheackAdmin'
 import axios from 'axios'
 import swal from 'sweetalert'
 import Footer from '../../component/Footer/Footer'
+import { Link } from 'react-router-dom'
 
 
 
@@ -43,6 +43,28 @@ function Profile() {
             })
         }
         console.log(num)
+    }
+  
+    async function fetchOrders(){
+        const response = await axios.get('/allOrders')
+        localStorage.setItem('orderTable', JSON.stringify(response.data.data));
+        if(response.data.success == true)
+        {
+            await swal({
+                title: "Success",
+                text: "Data fetch Successfully",
+                icon: "success",
+            })
+            window.location.href="/viewOrders";
+            
+        }
+        else{
+            await swal({
+                title: "Error",
+                text: "Data Fetch Error",
+                icon: "error",
+            })
+        }
     }
 
     function logOut() {
@@ -133,6 +155,7 @@ function Profile() {
                     <div class="d-grid gap-2 logout-btn">
                         <button className='btn btn-primary' onClick={createTable}>Create Table</button>
                          <button className='btn btn-primary' onClick={addFoodItem} >Add FoodItem</button>
+                         <button className='btn btn-primary' onClick={fetchOrders} >View Orders</button>
                         <button className='btn btn-primary' onClick={unBook} >Unbook Table</button>
                        
 

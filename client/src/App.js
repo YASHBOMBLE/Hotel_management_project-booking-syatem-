@@ -7,6 +7,7 @@ import BookTable from './views/BookTable/BookTable'
 import MyOrders from './views/MyOrders/MyOrders'
 import Profile from './views/Profile/Profile'
 import MyList from './views/MyList/MyList'
+import OrderView from './views/OrderView/OrderView'
 
 
 
@@ -22,7 +23,7 @@ function App() {
           <Route path='/profile' element={<Profile />} />
           <Route path='/myList' element={<MyList />} />
           <Route path='/myOrders' element={<MyOrders />} />
-     
+          <Route path='/viewOrders' element={<OrderView />} />
 
      
         </Routes>

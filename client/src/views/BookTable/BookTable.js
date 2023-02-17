@@ -5,6 +5,8 @@ import TableCard from '../../component/TableCard/TableCard';
 import Navbar from "./../../component/Navbar/Navbar"
 import { currentUser } from '../util/currentUser';
 import Footer from '../../component/Footer/Footer';
+import { loginRequired } from '../util/LoginRequired'
+
 function BookTable() {
   const [currentTable, setAvailableTables] = useState([]);
   async function allTables() {
@@ -14,6 +16,9 @@ function BookTable() {
   }
   useEffect(() => {
     allTables()
+  }, [])
+  useEffect(() => {
+    loginRequired()
   }, [])
   return (
     
