@@ -50,7 +50,7 @@ function Login() {
   return (
     <div>
 
-      <div className='row m-1'>
+      <div className='row m-1 size-form-container'>
         <div className='col-md-6'>
           <div class="container">
             <span className='text'>Login Here To continue</span>
@@ -61,7 +61,7 @@ function Login() {
 
         <div className='col-md-6'>
 
-          <div className='form-container size-form-container'>
+          <div className='form-container '>
             <form>
               <div className='form-title' >
                 Login

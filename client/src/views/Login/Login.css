@@ -54,6 +54,6 @@ body {
     width: 750px;
 }
 .size-form-container{
-    width: auto;
-    margin: 7px;
+display: flex;
+justify-content: center;
 }
