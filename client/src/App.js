@@ -9,6 +9,7 @@ import Profile from './views/Profile/Profile'
 import MyList from './views/MyList/MyList'
 
 
+
 function App() {
   return (
     <div>
@@ -21,6 +22,8 @@ function App() {
           <Route path='/profile' element={<Profile />} />
           <Route path='/myList' element={<MyList />} />
           <Route path='/myOrders' element={<MyOrders />} />
+     
+
      
         </Routes>
       </BrowserRouter>

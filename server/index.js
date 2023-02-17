@@ -123,6 +123,16 @@ app.post("/createFoodItem", async(req, res)=>{
         category: category
     })
 
+    if(!title || !description || !imgUrl || !price || !category)
+    {
+       res.json({
+        success: false,
+        message: "All fileds are required "
+        
+       })
+       
+    }
+    else{
     const savedFoodItem = await foodItem.save();
 
     res.json({
@@ -130,6 +140,7 @@ app.post("/createFoodItem", async(req, res)=>{
         message: "Food Item created successfully",
         data: savedFoodItem
     })
+    }
 })
 
 // http://localhost:5000/foodItemsByCategory?category=pizz

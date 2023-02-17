@@ -77,15 +77,52 @@ function Profile() {
    }
 
    async function addFoodItem(){
-    await  await swal({
+    const title = prompt("Item Title :")
+    const description = prompt("Item Description :")
+    const imgUrl = prompt("Item Image Url :")
+    const price = prompt("price")
+    const category = prompt("Item category")
+
+   
+
+
+    const response = await axios.post('/createFoodItem',{
+        title: title,
+        description: description,
+        imgUrl: imgUrl,
+        price: price,
+        category: category
+    })
+
+    console.log(response.data)
+    if(response.data.success == true)
+    {
+        await swal({
+            title:"Item Added Successfully ",
+            icon: "success",
+        })
+       
+    }
+    if(response.data.success == false)
+    {
+        await swal({
+            title:"All fields are required ",
+            icon: "warning",
+        })
+    }
+    
+    /*  await swal({
         title:"Feature Comming Soon ",
         text:"We Working On These Feature, Kindly Keep Cheaking ",
         icon: "warning",
     })
+    */
     }
    
-
+  
+   
     function adminView() {
+       
         if (currentUser?.role == "admin") {
             return (
                 <div className='admin-view-conatiner profile-container'>
@@ -95,9 +132,9 @@ function Profile() {
                     <hr />
                     <div class="d-grid gap-2 logout-btn">
                         <button className='btn btn-primary' onClick={createTable}>Create Table</button>
-                        <button className='btn btn-primary' onClick={addFoodItem}>Add FoodItem</button>
+                         <button className='btn btn-primary' onClick={addFoodItem} >Add FoodItem</button>
                         <button className='btn btn-primary' onClick={unBook} >Unbook Table</button>
-                      
+                       
 
                     </div>
 
@@ -153,6 +190,7 @@ function Profile() {
                     </div>
                 </div>
             </div>
+           
             <Footer />
         </div>
     )
