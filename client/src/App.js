@@ -8,6 +8,7 @@ import MyOrders from './views/MyOrders/MyOrders'
 import Profile from './views/Profile/Profile'
 import MyList from './views/MyList/MyList'
 import OrderView from './views/OrderView/OrderView'
+import AdminSignup from './views/AdiminSignup/AdminSignup'
 
 
 
@@ -24,6 +25,7 @@ function App() {
           <Route path='/myList' element={<MyList />} />
           <Route path='/myOrders' element={<MyOrders />} />
           <Route path='/viewOrders' element={<OrderView />} />
+          <Route path='/signupAdmin' element={<AdminSignup />} />
 
      
         </Routes>

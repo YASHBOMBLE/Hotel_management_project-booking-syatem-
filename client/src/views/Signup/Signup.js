@@ -110,6 +110,7 @@ function Signup() {
                 <button type='button' className='signup-button' onClick={signupUser}>Signup</button>
               </div>
             </form>
+           
           </div>
         </div>
       </div>

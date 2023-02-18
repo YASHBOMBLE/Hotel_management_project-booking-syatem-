@@ -282,16 +282,18 @@ app.get("/availableTables", async (req, res) => {
 });
 
 app.post("/orderFoodItems", async(req, res) => {
-    const {userId, tableNumber, items,paybaleamout} = req.body
+    const {userId, tableNumber, items,paybaleamout,totalBill } = req.body
 
     const totalOrders = await Order.countDocuments();
     const orderId = totalOrders + 1;
+
 
     const order = new Order({
         orderId: orderId,
         userId: userId,
         tableNumber: tableNumber,
-        items: items
+        items: items,
+      
         })
 
     const savedOrder = await order.save();
