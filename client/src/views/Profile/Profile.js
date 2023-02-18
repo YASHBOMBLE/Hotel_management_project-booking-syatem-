@@ -141,8 +141,13 @@ function Profile() {
     */
     }
    
-  async function createAdmin(){
-    
+   async function createAdmin(){
+    await swal({
+        title:"Success",
+        icon:"success"
+    })
+    window.location.href="/signupAdmin"
+
   }
    
     function adminView() {
