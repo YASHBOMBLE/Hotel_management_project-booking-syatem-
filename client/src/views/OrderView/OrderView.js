@@ -1,10 +1,13 @@
-import React, { useEffect, useState } from 'react'
-import { orderItems } from './../util/orderView'
+import React from 'react'
+
 import "./OrderView.css"
 import { loginRequired } from '../util/LoginRequired'
-import { currentUser } from '../util/currentUser'
+
 
 function OrderView() {
+  const orderItems = JSON.parse(localStorage.getItem('orderTable')) || []
+
+  //const orderItemsCount = orderItems.length ;
 
   return (
     <div>
