@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
-import { orderItems } from '../util/orderView'
+import { orderItems } from './../util/orderView'
 import "./OrderView.css"
 import { loginRequired } from '../util/LoginRequired'
 import { currentUser } from '../util/currentUser'
 
-function orderView() {
+function OrderView() {
 
   return (
     <div>
@@ -47,4 +47,4 @@ function orderView() {
   
 }
 
-export default orderView
+export default OrderView
