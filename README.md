@@ -1,5 +1,5 @@
 ## Hotel_management_project
-## Table Bokking System using MERN STAK
+## Table Bokking System using React JS,Mongo DB, Express JS, Node JS ...
 ### Login Page 👇👇
 ![LoginPage](./client/screenshots/loginpage.jpg "a title")
 ###
