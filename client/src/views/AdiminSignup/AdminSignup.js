@@ -17,11 +17,7 @@ function AdminSignup() {
     useEffect(()=>{
         loginRequired()
     },[])
-    useEffect(() => {
-        if (currentUser) {
-            window.location.href = "/"
-        }
-    }, [])
+  
     async function signupUser() {
         const response = await axios.post('/signup', {
             name: name,
