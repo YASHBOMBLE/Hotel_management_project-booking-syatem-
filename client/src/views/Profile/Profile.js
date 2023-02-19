@@ -141,14 +141,7 @@ function Profile() {
     */
     }
    
-   async function createAdmin(){
-    await swal({
-        title:"Success",
-        icon:"success"
-    })
-    window.location.href="/signupAdmin"
-
-  }
+  
    
     function adminView() {
        
@@ -163,7 +156,7 @@ function Profile() {
                         <button className='btn btn-primary' onClick={createTable}>Create Table</button>
                          <button className='btn btn-primary' onClick={addFoodItem} >Add FoodItem</button>
                          <button className='btn btn-primary' onClick={fetchOrders} >View Orders</button>
-                         <button className='btn btn-primary' onClick={createAdmin} >Create Admin</button>
+                         <button className='btn btn-primary createadminbtn'  ><Link to='/signupAdmin'>Create Admin</Link> </button>
                         <button className='btn btn-primary' onClick={unBook} >Unbook Table</button>
                        
 
