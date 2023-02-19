@@ -5,7 +5,7 @@
 ###
 ### Signup Page For Normal Users (Other than admin)👇👇
 ###
-![LoginPage](./client/screenshots/signup.jpg "a title")
+![](./client/screenshots/signup.jpg "a title")
 ### Home page.Where user can order food.👇👇
 ![](./client/screenshots/homepage.jpg "a title")
 👇👇
