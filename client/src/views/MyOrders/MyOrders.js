@@ -37,7 +37,7 @@ const currentOrder = JSON.parse(localStorage.getItem('myOrder')) || []
       <hr />
       <div className='container'>
         <div className='orderCard'>
-          <span className='card-title'>--Order Details are -- </span>
+          <span className='card-title'>--Order Details are-- </span>
           <hr />
          
       {
