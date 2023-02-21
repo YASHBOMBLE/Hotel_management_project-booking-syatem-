@@ -232,7 +232,7 @@ function Profile() {
 
                             </span>
                             <div class="d-grid gap-2 logout-btn mt-3">
-                                <button className='btn btn-primary' onClick={viewPreOrder}>View My Orders</button>
+                    
                                 <button type="button" className='btn btn-primary' onClick={logOut}><p className='logOut-text'>Logout</p><i class="fa-solid fa-right-from-bracket"></i></button>
                                 <button type="button" className='btn btn-primary' onClick={updateProfile}><p className='logOut-text'>Update Profile</p><i class="fa-regular fa-pen-to-square"></i></button>
 

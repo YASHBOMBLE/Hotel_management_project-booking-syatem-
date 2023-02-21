@@ -30,6 +30,7 @@ function MyOrders() {
   }
 */
 const currentOrder = JSON.parse(localStorage.getItem('myOrder')) || []
+
   return (
 
     <div>
