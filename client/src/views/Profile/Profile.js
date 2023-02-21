@@ -44,21 +44,42 @@ function Profile() {
         }
         console.log(num)
     }
-  
-    async function fetchOrders(){
-        const response = await axios.get('/allOrders')
-        localStorage.setItem('orderTable', JSON.stringify(response.data.data));
-        if(response.data.success == true)
-        {
+
+    async function viewPreOrder() {
+        const response = await axios.get(`/ordersByUserId?userId=${currentUser._id}`)
+        localStorage.setItem('myOrder', JSON.stringify(response.data.data));
+        if (response.data.success == true) {
             await swal({
                 title: "Success",
                 text: "Data fetch Successfully",
                 icon: "success",
             })
-            window.location.href="/viewOrders";
-            
+            window.location.href = "/myOrders";
+
         }
-        else{
+        else {
+            await swal({
+                title: "Error",
+                text: "Data Fetch Error",
+                icon: "error",
+            })
+        }
+ 
+    }
+
+    async function fetchOrders() {
+        const response = await axios.get('/allOrders')
+        localStorage.setItem('orderTable', JSON.stringify(response.data.data));
+        if (response.data.success == true) {
+            await swal({
+                title: "Success",
+                text: "Data fetch Successfully",
+                icon: "success",
+            })
+            window.location.href = "/viewOrders";
+
+        }
+        else {
             await swal({
                 title: "Error",
                 text: "Data Fetch Error",
@@ -72,87 +93,83 @@ function Profile() {
         window.location.href = '/login'
     }
 
-   async function createTable(){
-    let tableNumber = prompt("Enter Table Number :")
-    const response = await axios.post('/createTable',{
-        tableNumber:tableNumber
-      })
-      const result=response.data.success;
-      
-      if(result == true)
-      {
-        await swal({
-            title: "Sucess",
-            text: "Table Created Successfully",
-            icon: "success",
+    async function createTable() {
+        let tableNumber = prompt("Enter Table Number :")
+        const response = await axios.post('/createTable', {
+            tableNumber: tableNumber
+        })
+        const result = response.data.success;
+
+        if (result == true) {
+            await swal({
+                title: "Sucess",
+                text: "Table Created Successfully",
+                icon: "success",
+            })
+
+        }
+        else {
+            await swal({
+                title: "Error",
+                text: "Table Already Exist",
+                icon: "warning",
+            })
+        }
+    }
+
+    async function addFoodItem() {
+        const title = prompt("Item Title :")
+        const description = prompt("Item Description :")
+        const imgUrl = prompt("Item Image Url :")
+        const price = prompt("price")
+        const category = prompt("Item category")
+
+
+
+
+        const response = await axios.post('/createFoodItem', {
+            title: title,
+            description: description,
+            imgUrl: imgUrl,
+            price: price,
+            category: category
         })
 
-      }
-      else
-      {
-        await swal({
-            title: "Error",
-            text: "Table Already Exist",
+        console.log(response.data)
+        if (response.data.success == true) {
+            await swal({
+                title: "Item Added Successfully ",
+                icon: "success",
+            })
+
+        }
+        if (response.data.success == false) {
+            await swal({
+                title: "All fields are required ",
+                icon: "warning",
+            })
+        }
+
+        /*  await swal({
+            title:"Feature Comming Soon ",
+            text:"We Working On These Feature, Kindly Keep Cheaking ",
             icon: "warning",
         })
-      }
-   }
-
-   async function addFoodItem(){
-    const title = prompt("Item Title :")
-    const description = prompt("Item Description :")
-    const imgUrl = prompt("Item Image Url :")
-    const price = prompt("price")
-    const category = prompt("Item category")
-
-   
-
-
-    const response = await axios.post('/createFoodItem',{
-        title: title,
-        description: description,
-        imgUrl: imgUrl,
-        price: price,
-        category: category
-    })
-
-    console.log(response.data)
-    if(response.data.success == true)
-    {
-        await swal({
-            title:"Item Added Successfully ",
-            icon: "success",
-        })
-       
+        */
     }
-    if(response.data.success == false)
-    {
+
+
+    async function createAdmin() {
         await swal({
-            title:"All fields are required ",
-            icon: "warning",
-        })
-    }
-    
-    /*  await swal({
-        title:"Feature Comming Soon ",
-        text:"We Working On These Feature, Kindly Keep Cheaking ",
-        icon: "warning",
-    })
-    */
-    }
-   
-  
-    async function createAdmin(){
-        await swal({
-            title:"Success ",
+            title: "Success ",
             icon: "success"
         })
 
         window.location.href = "/signupAdmin"
     }
-   
+
     function adminView() {
-       
+
         if (currentUser?.role == "admin") {
             return (
                 <div className='admin-view-conatiner profile-container'>
@@ -162,11 +179,11 @@ function Profile() {
                     <hr />
                     <div class="d-grid gap-2 logout-btn">
                         <button className='btn btn-primary' onClick={createTable}>Create Table</button>
-                         <button className='btn btn-primary' onClick={addFoodItem} >Add FoodItem</button>
-                         <button className='btn btn-primary' onClick={fetchOrders} >View Orders</button>
-                         <button className='btn btn-primary' onClick={createAdmin} >Create Admin </button>
+                        <button className='btn btn-primary' onClick={addFoodItem} >Add FoodItem</button>
+                        <button className='btn btn-primary' onClick={fetchOrders} >View Orders</button>
+                        <button className='btn btn-primary' onClick={createAdmin} >Create Admin </button>
                         <button className='btn btn-primary' onClick={unBook} >Unbook Table</button>
-                       
+
 
                     </div>
 
@@ -177,10 +194,10 @@ function Profile() {
         }
     }
 
-    async function updateProfile(){
+    async function updateProfile() {
         await swal({
-            title:"Feature Comming Soon ",
-            text:"We Working On These Feature, Kindly Keep Cheaking ",
+            title: "Feature Comming Soon ",
+            text: "We Working On These Feature, Kindly Keep Cheaking ",
             icon: "warning",
         })
         window.location.reload();
@@ -215,14 +232,16 @@ function Profile() {
 
                             </span>
                             <div class="d-grid gap-2 logout-btn mt-3">
+                                <button className='btn btn-primary' onClick={viewPreOrder}>View My Orders</button>
                                 <button type="button" className='btn btn-primary' onClick={logOut}><p className='logOut-text'>Logout</p><i class="fa-solid fa-right-from-bracket"></i></button>
                                 <button type="button" className='btn btn-primary' onClick={updateProfile}><p className='logOut-text'>Update Profile</p><i class="fa-regular fa-pen-to-square"></i></button>
+
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-           
+
             <Footer />
         </div>
     )

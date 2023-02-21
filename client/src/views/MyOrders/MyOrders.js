@@ -7,7 +7,7 @@ import { currentUser } from '../util/currentUser'
 import Navbar from '../../component/Navbar/Navbar'
 import Footer from './../../component/Footer/Footer'
 function MyOrders() {
-  const [currentOrder, setOrder] = useState([]);
+
   const [items, setItems] = useState([]);
   const [result, setResult] = useState([]);
 
@@ -16,7 +16,7 @@ function MyOrders() {
   }, [])
 
 
-  useEffect(() => {
+  /*useEffect(() => {
     fetchOrder()
   }, [currentUser])
 
@@ -28,7 +28,8 @@ function MyOrders() {
         setOrder(item.items)       
     })  
   }
-
+*/
+const currentOrder = JSON.parse(localStorage.getItem('myOrder')) || []
   return (
 
     <div>
